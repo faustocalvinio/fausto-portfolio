@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-fausto-astro",
+  "name": "simple-portfolio-fausto",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,6 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.4"
+    "astro": "^3.0.6"
   }
 }
