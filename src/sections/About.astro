@@ -1,11 +1,14 @@
 <section>
 <!-- <img src='../../public/assets/wallpaper' /> -->
-<h4>
-    About
-</h4>
-<p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, aspernatur. Veritatis, aliquid? Unde aliquid minus quibusdam corporis vitae iure corrupti tenetur repudiandae porro numquam, adipisci expedita sed ad assumenda. Ex pariatur molestias voluptatum necessitatibus voluptatibus perferendis quas nam soluta laudantium quisquam facilis optio quam eos quibusdam corrupti reprehenderit, sunt est!
-</p>
+<div class="about-text-container">
+    <h4>
+        About
+    </h4>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, aspernatur. Veritatis, aliquid? Unde aliquid minus quibusdam corporis vitae iure corrupti tenetur repudiandae porro numquam, adipisci expedita sed ad assumenda. Ex pariatur molestias voluptatum necessitatibus voluptatibus perferendis quas nam soluta laudantium quisquam facilis optio quam eos quibusdam corrupti reprehenderit, sunt est!
+    </p>
+
+</div>
 <img src="../../public/favicon.svg">
 </img>
 </section>
@@ -13,10 +16,15 @@
 <style>
     section{
         background-color:red;
-        
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     .bg-image{
 
+    }
+    .about-text-container{
+        width: 60%;
     }
     h4,p {
         color:#fff;
