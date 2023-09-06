@@ -1,27 +1,114 @@
 <nav>
     <h3>logo</h3>
     <ul>
-        <li>nav1</li>
-        <li>nav2</li>
-        <li>nav3</li>
-        <li>nav4</li>
+        <li>
+            <a href="">About</a>
+        </li>
+        <li>
+            <a href="">Skills</a>
+        </li>
+        <li>
+            <a href="">Projects</a>
+        </li>
+        <li>
+            <a href="">Socials</a>
+        </li>
+        <li>
+            <img src="../../public/assets/moon-icon.png" alt="" id="moon-icon">
+            <img src="../../public/assets/sun.png" alt="" id="light-icon">
+        </li>
     </ul>
 </nav>
 
 
 <style>
+    :root{
+        --displayIconMoon:none;
+        --displayIconSun:none
+
+    }
+
+
     nav{
         width: 100%;
         position: fixed;
-        background-color: aquamarine;
+        background-color: var(--navBarBg);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        color:var(--textColor);
+        
+    }
+    h3{
+        margin-left: calc(( 100vw - 1400px)/2);
+
     }
     ul{
         list-style: none;
         display: flex;
         flex-direction: row;
         gap: 20px;
+        margin-right: calc(( 100vw - 1400px)/2);
+    }
+    a{
+        text-decoration: none;
+        color:var(--textColor);
+    }
+    img{
+        width: 20px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+    #light-icon{
+        filter: invert();
+    }
+    .hide-icon{
+        display: none;
+    }
+    /* [data-theme="dark"] {
+        --navBarBg:#000;
+    } */
+    /* @media (prefers-color-scheme: light) {
+        #light-icon{
+            display: none;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        #moon-icon{
+            display: none;
+        } */
     }
 </style>
+<script>
+    const moonIcon=document.getElementById('moon-icon');
+    const lightIcon=document.getElementById('light-icon');
+
+
+
+
+
+
+    moonIcon.addEventListener('click',()=>{
+        console.log('click on moon')
+        if (document.documentElement.getAttribute("data-theme") == "dark"){
+          document.documentElement.setAttribute('data-theme','light')
+        }else if(document.documentElement.getAttribute("data-theme") == "light"){
+          document.documentElement.setAttribute('data-theme','dark')
+        }else{
+          return console.log('Error changing document theme colour')
+        }
+
+    })
+
+    lightIcon.addEventListener('click',()=>{
+        console.log('click on sun')
+
+        if (document.documentElement.getAttribute("data-theme") == "dark"){
+          document.documentElement.setAttribute('data-theme','light')
+        }else if(document.documentElement.getAttribute("data-theme") == "light"){
+          document.documentElement.setAttribute('data-theme','dark')
+        }else{
+          return console.log('Error changing document theme colour')
+        }
+    })
+</script>
