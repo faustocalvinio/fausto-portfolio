@@ -1,36 +1,19 @@
-<section>
-<!-- <img src='../../public/assets/wallpaper' /> -->
-<div class="about-text-container">
-    <h4>
-        About
-    </h4>
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, aspernatur. Veritatis, aliquid? Unde aliquid minus quibusdam corporis vitae iure corrupti tenetur repudiandae porro numquam, adipisci expedita sed ad assumenda. Ex pariatur molestias voluptatum necessitatibus voluptatibus perferendis quas nam soluta laudantium quisquam facilis optio quam eos quibusdam corrupti reprehenderit, sunt est!
-    </p>
+---
+import { Image } from 'astro:assets';
+import myImage from "../../public/assets/image-park-compress.webp"
+import SectionTitle from "../components/SectionTitle.astro";
+---
 
-</div>
-<img src="../../public/favicon.svg">
-</img>
+<section id="about" class="py-14  max-sm:w-[90%] max-sm:mx-auto">
+    <SectionTitle sectionTitle="About" />
+    <div class="flex justify-between items-center my-5 max-sm:flex-col ">
+        <div class="w-[45%] max-sm:w-full">
+            <p class="text-xl text-gray-900 dark:text-white max-sm:text-center">Since half of 2021 I started to learn front-end web development in a self-taught way. I have knowledge in HTML, CSS, JavaScript and the React framework ecosystem. <br/><br/>Currently, I am expanding my knowledge in NextJS, TailwindCSS and more technologies that you can find on my website faustocalvinio.netlify.app. <br/><br/>I am available for any job opportunity related to these technologies.</p>
+            
+        </div>
+        <div class="w-[30%] max-sm:w-full">
+            <Image class="rounded-lg" src={myImage} alt="Una descripción de mi imagen." />
+        </div>
+    </div>
+    
 </section>
-
-<style>
-    section{
-        background-color:red;
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-        background-color: var(--navBarBg);
-    }
-    .bg-image{
-
-    }
-    .about-text-container{
-        width: 60%;
-    }
-    h4,p {
-        color:var(--textColor);
-    }
-    img{
-        width:200px;
-    }
-</style>

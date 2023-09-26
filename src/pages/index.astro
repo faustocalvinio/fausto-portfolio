@@ -1,18 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import  Header from '../sections/Header.astro'
-import  Navbar from '../components/Navbar.astro'
-import About from '../sections/About.astro'
+import  Header from '../sections/Header.astro';
+import  Navbar from '../components/Navbar.astro';
+import About from '../sections/About.astro';
+import Skills from '../sections/Skills.astro';
 import Projects from '../sections/Projects.astro';
 import Footer from '../components/Footer.astro';
-
 ---
 
 <Layout title="Portfolio Fausto Calviño">
 	<Navbar />
 	<Header />
-	<About />
-	<Projects />
+		<main class="max-w-[1300px] my-0 mx-auto">
+			<About />
+			<Skills />
+			<Projects />
+		</main>
 	<Footer /> 
 </Layout>
 

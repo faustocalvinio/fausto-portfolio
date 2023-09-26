@@ -17,38 +17,12 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		
 	</head>
-	<body>
-		<slot />
+	<body class="dark:bg-gray-900">			
+		<slot />		
 	</body>
 </html>
 <style is:global>
-
-	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
-	:root {
-		--navBarBg:#fff;
-		--textColor:#000;
-	}
-	[data-theme="dark"] {
-        --navBarBg:#000;
-		--textColor:#fff;
-
-    }
 	*{
-		font-family: 'Raleway';
+		scroll-behavior: smooth;
 	}
-	html {
-		
-		background: #13151A;
-		
-	}
-	body{
-		margin: 0;
-		padding: 0;
-		background-image: url('../../public/assets/wallpaper-1.jpg');
-	}
-	@media (prefers-color-scheme: dark) {
-        :root{
-			--navBarBg:#000;
-		}
-    }
 </style>
