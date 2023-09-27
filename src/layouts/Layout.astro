@@ -23,55 +23,58 @@ const { title } = Astro.props;
 		<slot />		
 	</body>
 </html>
-<style is:global>
-	.scale-up-center {
-	-webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
-@-webkit-keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-@keyframes scale-up-center {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
+<style is:global>	
+	:root{
+		--scrollbarTrackColor:#f1f1f1;
+		--scrollbarThumbColor:#888;
+	}
 
-  
-	/* width */
 	::-webkit-scrollbar {
 		width: 10px;
 	}
 	
 	/* Track */
 	::-webkit-scrollbar-track {
-		background: #f1f1f1;
+		background: var(--scrollbarTrackColor);
 	}
 	
 	/* Handle */
 	::-webkit-scrollbar-thumb {
-		background: #888;
+		background: var(--scrollbarThumbColor);
 		border-radius: 5px;
-	}
-	
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: #555;
 	}
 
 	*{
 		scroll-behavior: smooth;
 	}
+
+	.scale-up-center {
+	-webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	}	
+
+	@-webkit-keyframes scale-up-center {
+		0% {
+			-webkit-transform: scale(0.5);
+					transform: scale(0.5);
+		}
+		100% {
+			-webkit-transform: scale(1);
+					transform: scale(1);
+		}
+	}
+	@keyframes scale-up-center {
+		0% {
+			-webkit-transform: scale(0.5);
+					transform: scale(0.5);
+		}
+		100% {
+			-webkit-transform: scale(1);
+					transform: scale(1);
+		}
+	}
+	
+	
+
+	
 </style>
