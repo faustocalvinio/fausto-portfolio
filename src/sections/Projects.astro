@@ -4,7 +4,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 
-<section class="py-14 max-sm:w-[90%] max-sm:mx-auto" id="projects">
+<section class="py-14 scale-up-center max-sm:w-[90%] max-sm:mx-auto"   id="projects">
     
     <SectionTitle sectionTitle="Projects" />
 
@@ -12,9 +12,14 @@ import ProjectCard from "../components/ProjectCard.astro";
     
     <div class="grid-projects grid grid-cols-3 gap-5 max-sm:grid-cols-1">
         
-        <ProjectCard />
-        <ProjectCard />        
-        <ProjectCard />     
+        <ProjectCard 
+            technologies={['Tesla','Audi']}
+            title="Title Test"
+            description="Decription Test"
+            deployLink="https://faustocalvinio.github.io/gif-expert-app-fcc/"
+            codeLink="https://github.com/faustocalvinio"
+        />
+        
 
     </div>
 </section>
