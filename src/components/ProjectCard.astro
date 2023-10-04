@@ -1,12 +1,11 @@
 ---
 import { Image } from 'astro:assets';
-import myImage from "../../public/assets/projects/active-url-shortening-app.png"
 const { technologies, title, description, deployLink, codeLink, image } = Astro.props
 ---
 
 <div class="max-w-md mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">        
-        <Image   class="rounded-t-lg aspect-video object-cover object-top" src={image} alt="Una descripción de mi imagen." />
+        <Image class="rounded-t-lg aspect-video object-cover object-top" src={image} alt="Una descripción de mi imagen." />
     </a>
     <div class="p-5 ">
         <a href="#">
@@ -14,8 +13,7 @@ const { technologies, title, description, deployLink, codeLink, image } = Astro.
         </a>
         <div class="flex flex-row gap-2 my-3">
             {
-                technologies.map(item=><div class="border-red-600 border-2 p-1 text-red-500">{item}</div>)
-            
+                technologies.map(item=><div class="border-gray-500 border-[1px] py-1 text-gray-500 px-2 rounded-lg text-sm dark:text-white dark:border-white dark:opacity-60">{item}</div>)
             }
                 
         </div>

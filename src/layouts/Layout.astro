@@ -2,7 +2,6 @@
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -14,16 +13,21 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
-
-		
+		<title>{title}</title>		
 	</head>
 	<body class="dark:bg-gray-900">			
 		<slot />		
 	</body>
 </html>
 <style is:global>	
+	::selection{
+		color: #fff;
+		background-color: #000;
+	}
+	.dark ::selection {
+		background-color: #fff;
+		color: #000;
+	}
 	:root{
 		--scrollbarTrackColor:#f1f1f1;
 		--scrollbarThumbColor:#888;
@@ -31,50 +35,20 @@ const { title } = Astro.props;
 
 	::-webkit-scrollbar {
 		width: 10px;
-	}
-	
-	/* Track */
+	}	
 	::-webkit-scrollbar-track {
 		background: var(--scrollbarTrackColor);
-	}
-	
-	/* Handle */
+	}	
 	::-webkit-scrollbar-thumb {
 		background: var(--scrollbarThumbColor);
 		border-radius: 5px;
 	}
-
+	.dark{
+		--scrollbarThumbColor:#000;
+		--scrollbarTrackColor:#1F2937;
+	}
 	*{
 		scroll-behavior: smooth;
 	}
-
-	.scale-up-center {
-	-webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	}	
-
-	@-webkit-keyframes scale-up-center {
-		0% {
-			-webkit-transform: scale(0.5);
-					transform: scale(0.5);
-		}
-		100% {
-			-webkit-transform: scale(1);
-					transform: scale(1);
-		}
-	}
-	@keyframes scale-up-center {
-		0% {
-			-webkit-transform: scale(0.5);
-					transform: scale(0.5);
-		}
-		100% {
-			-webkit-transform: scale(1);
-					transform: scale(1);
-		}
-	}
-	
-	
-
 	
 </style>
