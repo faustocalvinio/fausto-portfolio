@@ -7,6 +7,9 @@ module.exports = {
 		extend: { 
 			
 		},
+		fontFamily: {
+			'sans': ['Inter', 'sans-serif']
+		}
 	},
 	plugins: [
 		require('flowbite/plugin')

@@ -7,27 +7,27 @@ const { technologies, title, description, deployLink, codeLink, image } = Astro.
     <a href="#">        
         <Image class="rounded-t-lg aspect-video object-cover object-top" src={image} alt="Una descripción de mi imagen." />
     </a>
-    <div class="p-5 ">
-        <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-        </a>
-        <div class="flex flex-row gap-2 my-3">
-            {
-                technologies.map(item=><div class="border-gray-500 border-[1px] py-1 text-gray-500 px-2 rounded-lg text-sm dark:text-white dark:border-white dark:opacity-60">{item}</div>)
-            }
-                
+    <div class="p-5 flex items-center align-middle justify-between flex-col gap-8">
+            <div class="">
+                <a href="#">
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+                </a>
+                <div class="flex flex-row gap-2 my-3">
+                    {
+                        technologies.map(item=><div class="border-gray-500 border-[1px] py-1 text-gray-500 px-2 rounded-lg text-sm dark:text-white dark:border-white dark:opacity-60">{item}</div>)
+                    }
+                        
+                </div>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+            
         </div>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{description}</p>
+        
         <div class="flex flex-row justify-between">
-            <a target="_blank" href={ deployLink } class="w-[40%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                <span class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            <a target="_blank" href={ deployLink } class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
                     Deploy
-                </span>
             </a>
-            <a target="_blank" href={ codeLink } class="w-[40%] relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-                <span class="relative w-full px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                    Code
-                </span>
+            <a target="_blank" href={ codeLink } class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
+                Code
             </a>
         </div>
         

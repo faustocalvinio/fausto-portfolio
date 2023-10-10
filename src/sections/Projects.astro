@@ -2,6 +2,7 @@
 import SectionTitle from "../components/SectionTitle.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import urlImage from "../../public/assets/projects/active-url-shortening-app.png"
+import searchFootballImage from "../../public/assets/projects/screenshot-08-oct.png"
 ---
 
 <section class="py-1 max-sm:w-[90%] max-sm:mx-auto"   id="projects">
@@ -19,6 +20,13 @@ import urlImage from "../../public/assets/projects/active-url-shortening-app.png
             codeLink="https://github.com/faustocalvinio/frontendmentor/tree/main/url-shortening-app"
             image={urlImage}
         />       
-
+        <ProjectCard 
+        technologies={['React','HTML','CSS','FetchAPI']}
+        title="Search Football Player"
+        description="This is a small project where you can search for a football player or coach, and it will display information on the screen from TheSportsDB API about that search."
+        deployLink="https://search-football-player-fcc.netlify.app/"
+        codeLink="https://github.com/faustocalvinio/search-football-player"
+        image={searchFootballImage}
+        />   
     </div>
 </section>
