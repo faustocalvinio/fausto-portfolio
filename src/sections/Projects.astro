@@ -3,12 +3,13 @@ import SectionTitle from "../components/SectionTitle.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import urlImage from "../../public/assets/projects/active-url-shortening-app.png"
 import searchFootballImage from "../../public/assets/projects/screenshot-08-oct.png"
+import triviaGameScreenshot from "../../public/assets/projects/trivia-app-fcc.vercel.app_.png";
 ---
 
-<section class="py-1 max-sm:w-[90%] max-sm:mx-auto"   id="projects">
+<section class="py-10 max-sm:w-[90%] max-sm:mx-auto"   id="projects">
     
     <SectionTitle sectionTitle="Projects" />
-    <p class="text-xl my-5 text-gray-900 dark:text-white max-sm:text-center">Currently, I am actively working on projects using the technologies I've learned. In the near future, you will find links to the source code and live websites for each project in this section. Stay tuned for updates!</p>
+    <p class="text-xl my-5 text-gray-900 dark:text-white max-sm:text-center">Currently, I am actively working on projects using the technologies I've learned. In the near future, you will find links to the source code and live websites for each project in this section.</p>
     
     <div class="grid-projects grid grid-cols-3 gap-5 max-sm:grid-cols-1">
         
@@ -27,6 +28,14 @@ import searchFootballImage from "../../public/assets/projects/screenshot-08-oct.
         deployLink="https://search-football-player-fcc.netlify.app/"
         codeLink="https://github.com/faustocalvinio/search-football-player"
         image={searchFootballImage}
+        />   
+        <ProjectCard 
+        technologies={['React','HTML','CSS','FetchAPI']}
+        title="Trivia App"
+        description="Trivia app."
+        deployLink="https://trivia-app-fcc.vercel.app/"
+        codeLink="https://github.com/faustocalvinio/search-football-player"
+        image={triviaGameScreenshot}
         />   
     </div>
 </section>

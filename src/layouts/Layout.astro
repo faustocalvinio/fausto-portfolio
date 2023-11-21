@@ -17,6 +17,13 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<title>{title}</title>		
+		<script defer>		
+			if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark')
+			}
+		</script>
 	</head>
 	<body class="dark:bg-gray-900">			
 		<slot />		
@@ -52,6 +59,7 @@ const { title } = Astro.props;
 	}
 	*{
 		scroll-behavior: smooth;
+		scroll-padding-top: 90px;
 	}
 	
 </style>
