@@ -3,11 +3,11 @@ import { Image } from 'astro:assets';
 const { technologies, title, description, deployLink, codeLink, image } = Astro.props
 ---
 
-<div class="max-w-md mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-md mx-auto bg-white border rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">        
         <Image class="rounded-t-lg aspect-video object-cover object-top" src={image} alt="Una descripción de mi imagen." />
     </a>
-    <div class="p-5 flex items-center align-middle justify-between flex-col gap-8">
+    <div class="p-5 flex justify-between  flex-col ">
             <div class="">
                 <a href="#">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
