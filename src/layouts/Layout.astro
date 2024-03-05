@@ -1,5 +1,4 @@
 ---
-import Navbar from "../components/Navbar.astro";
 import "@fontsource-variable/onest";
 interface Props {
   title: string;
@@ -29,9 +28,45 @@ const { title } = Astro.props;
     </div>
   </body>
 </html>
-<style>
-   html {
-        font-family: "Onest Variable", system-ui, sans-serif;
-        scroll-behavior: smooth;
-      }
-</style>4
+<style is:global>
+  html {
+    font-family: "Onest Variable", system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  ::selection {
+    color: #fff;
+    background-color: #494949;
+  }
+  .dark ::selection {
+    background-color: #fff;
+    color: #000;
+  }
+  .dark ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  /* Track */
+  .dark ::-webkit-scrollbar-track {
+    background: #111827; /* Color of the scrollbar track */
+  }
+
+  /* Handle */
+  .dark ::-webkit-scrollbar-thumb {
+    background: #414141; /* Color of the scrollbar handle */
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #ffffff; /* Color of the scrollbar track */
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #b3b3b3; /* Color of the scrollbar handle */
+  }
+</style>
